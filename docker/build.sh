@@ -20,4 +20,4 @@ cmake -S "mozjpeg-$mozjpeg_version" -B build -G Ninja \
     -D CMAKE_LINK_SEARCH_END_STATIC=1 -D CMAKE_LINK_SEARCH_START_STATIC=1
 
 cd build && ninja
-strip cjpeg-static
+strip jpegtran-static
