@@ -15,15 +15,14 @@ const cpuNumber = os.cpus().length;
 test('rebuild the mozjpeg binaries', async t => {
 	const temporary = tempy.directory();
 	const cfg = [
-		'./configure --enable-static --disable-shared --disable-dependency-tracking --with-jpeg8',
-		`--prefix="${temporary}" --bindir="${temporary}" --libdir="${temporary}"`
+		'cmake -S . -B . -D ENABLE_SHARED=OFF'
 	].join(' ');
 
 	await binBuild.file(path.resolve(__dirname, '../vendor/source/mozjpeg.tar.gz'), [
-		'autoreconf -fiv',
 		cfg,
 		`make --jobs=${cpuNumber}`,
-		`make install --jobs=${cpuNumber}`
+		'strip jpegtran-static',
+		`cp jpegtran-static "${temporary}/jpegtran"`
 	]);
 
 	t.true(fs.existsSync(path.join(temporary, 'jpegtran')));
