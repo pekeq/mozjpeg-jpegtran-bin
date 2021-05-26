@@ -14,6 +14,7 @@ sed -E -i.bk '/^cmake_minimum_required/a\
 unset(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS)' "mozjpeg-$mozjpeg_version"/CMakeLists.txt
 
 cmake -S "mozjpeg-$mozjpeg_version" -B build -G Ninja \
+	-D PNG_SUPPORTED=OFF \
     -D ENABLE_SHARED=OFF \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D CMAKE_FIND_LIBRARY_SUFFIXES=.a \
