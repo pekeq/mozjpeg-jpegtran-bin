@@ -1,4 +1,4 @@
-# mozjpeg-bin ![GitHub Actions Status](https://github.com/imagemin/mozjpeg-bin/workflows/test/badge.svg?branch=master)
+# mozjpeg-jpegtran-bin ![GitHub Actions Status](https://github.com/pekeq/mozjpeg-jpegtran-bin/actions/workflows/test.yml/badge.svg?branch=master)
 
 > [mozjpeg](https://github.com/mozilla/mozjpeg) is a production-quality JPEG encoder that improves compression while maintaining compatibility with the vast majority of deployed decoders
 
@@ -8,7 +8,7 @@ You probably want [`imagemin-mozjpeg`](https://github.com/imagemin/imagemin-mozj
 ## Install
 
 ```
-$ npm install mozjpeg
+$ npm install pekeq/mozjpeg-jpegtran-bin
 ```
 
 
@@ -16,7 +16,7 @@ $ npm install mozjpeg
 
 ```js
 const {execFile} = require('child_process');
-const mozjpeg = require('mozjpeg');
+const mozjpeg = require('mozjpeg-jpegtran');
 
 execFile(mozjpeg, ['-outfile', 'output.jpg', 'input.jpg'], err => {
 	console.log('Image minified!');
@@ -27,11 +27,11 @@ execFile(mozjpeg, ['-outfile', 'output.jpg', 'input.jpg'], err => {
 ## CLI
 
 ```
-$ npm install --global mozjpeg
+$ npm install --global mozjpeg-jpegtran-bin
 ```
 
 ```
-$ mozjpeg --help
+$ mozjpeg-jpegtran --help
 ```
 
 
