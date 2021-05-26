@@ -1,10 +1,12 @@
 {
-	"name": "mozjpeg-jpegtran",
+	"name": "mozjpeg-jpegtran-bin",
 	"version": "0.1.1",
 	"description": "mozjpeg wrapper that makes it seamlessly available as a local dependency",
 	"license": "MIT",
 	"repository": "pekeq/mozjpeg-jpegtran-bin",
-	"bin": "cli.js",
+	"bin": {
+		"mozjpeg-jpegtran": "cli.js"
+	},
 	"engines": {
 		"node": ">=10"
 	},

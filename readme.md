@@ -2,13 +2,13 @@
 
 > [mozjpeg](https://github.com/mozilla/mozjpeg) is a production-quality JPEG encoder that improves compression while maintaining compatibility with the vast majority of deployed decoders
 
-You probably want [`imagemin-mozjpeg`](https://github.com/imagemin/imagemin-mozjpeg) instead.
+You probably want [`imagemin-mozjpeg-jpegtran`](https://github.com/pekeq/imagemin-mozjpeg-jpegtran) instead.
 
 
 ## Install
 
 ```
-$ npm install pekeq/mozjpeg-jpegtran-bin
+$ npm install mozjpeg-jpegtran-bin
 ```
 
 
@@ -16,7 +16,7 @@ $ npm install pekeq/mozjpeg-jpegtran-bin
 
 ```js
 const {execFile} = require('child_process');
-const mozjpeg = require('mozjpeg-jpegtran');
+const mozjpeg = require('mozjpeg-jpegtran-bin');
 
 execFile(mozjpeg, ['-outfile', 'output.jpg', 'input.jpg'], err => {
 	console.log('Image minified!');
