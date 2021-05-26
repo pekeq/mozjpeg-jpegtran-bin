@@ -37,4 +37,4 @@ $ mozjpeg-jpegtran --help
 
 ## License
 
-MIT © [Imagemin](https://github.com/imagemin)
+MIT © [Imagemin](https://github.com/imagemin), Hideo Matsumoto
