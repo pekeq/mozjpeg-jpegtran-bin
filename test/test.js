@@ -15,7 +15,7 @@ const cpuNumber = os.cpus().length;
 test('rebuild the mozjpeg binaries', async t => {
 	const temporary = tempy.directory();
 	const cfg = [
-		'cmake -S . -B . -D PNG_SUPPORTED=OFF -D ENABLE_SHARED=OFF'
+		'cmake -S . -B . -D WITH_JPEG8=ON -D PNG_SUPPORTED=OFF -D ENABLE_SHARED=OFF'
 	].join(' ');
 
 	await binBuild.file(path.resolve(__dirname, '../vendor/source/mozjpeg.tar.gz'), [
